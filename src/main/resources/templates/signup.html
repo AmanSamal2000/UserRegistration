@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymelea.org">
+<head>
+    <style>
+		.d1{
+			height: 140px;
+			width: 1330px;
+			background-color: darkblue;
+		}
+		.d2{
+			height: 250px;
+			width: 500px;
+			background-color: gray;
+		}
+		.d3{
+
+			background-color: white;
+			border-radius: 30px;
+
+		}
+		.d5{
+
+			background-color: white;
+			border-radius: 30px;
+		}
+		div.p5{
+			color: blue;
+		}
+
+
+    </style>
+
+    <title></title>
+</head>
+<body>
+<div>
+    <div class="d1">
+        <br>
+        <img src="/static/naac1.jpg" alt="naac1" height="120px" width="150px" style="float:left">
+        <img src="/static/naac1.jpg" alt="naac1" height="120px" width="150px" style="float:right;">
+
+        <h1 style="color: white;">INDIRA GANDHI NATIONAL OPEN UNIVERSITY
+            KNOW YOUR ADMISSION/REGISTRATION DETAILS</h1>
+
+<!--<div th:if="${session.message}"-->
+<!--               th:classappend="${session.massage}" class="alert alert-success" role="alert">-->
+<!--        <p th:text="${session.massage}"></p>-->
+<!--        <th:block th:text="${#session.removeAttribute('message')}"></th:block>-->
+<!--</div>-->
+    </div>
+    <br>
+    <br>
+        <div class="d2">
+            <form th:action="@{/registers}" th:object="${user}" method="post">
+                <table>
+                    <tr>
+
+                        <td>
+                            <label>Name</label></td>
+                        <td></td>
+                        <td></td>
+                        <td>:</td>
+                        <td><input type="text" autofocus maxlength="15" name="name" placeholder="Enter Your Full Name"></td>
+                    </tr>
+                    <br style="padding: 5px;">
+                    <tr>
+
+                        <td>
+                            <label>Email</label></td>
+                        <td></td>
+                        <td></td>
+                        <td>:</td>
+                        <td><input type="text" autofocus maxlength="20" name="email" placeholder="name124@gmail.com"></td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <label>PhoneNumber</label></td>
+                        <td></td>
+                        <td></td>
+                        <td>:</td>
+                        <td><input type="text" autofocus maxlength="20" name="number" placeholder="1234567890"></td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <label>CourseName</label></td>
+                        <td></td>
+                        <td></td>
+                        <td>:</td>
+                        <td><input type="text" autofocus maxlength="20" name="course" placeholder="Enter Your Course"></td>
+                    </tr>
+
+                    <td>
+                        <label>PASSWORD</label></td>
+                    <td></td>
+                    <td></td>
+                    <td>:</td>
+                    <td><input type="password" autofocus maxlength="20" name="password" placeholder="*************"></td>
+                    </tr>
+
+                </table>
+                <br>
+                <br>
+                <button class="d5" type="submit">Register</button>
+                <button class="d3" style="width: 100px;">Reset</button>
+                <br>
+                <p5>Help with login</p5>
+                <br>
+                <p5>Forgot your password</p5>
+
+            </form>
+
+        </div>
+</div>
+</body>
+</html>
+

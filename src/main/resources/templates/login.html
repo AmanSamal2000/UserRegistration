@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+		.d1{
+			height: 140px;
+			width: 1330px;
+			background-color: darkblue;
+		}
+		input[type=text], input[type=password], select {
+        display: inline-block;
+        width: 200px;
+    }
+		.d2{
+			height: 250px;
+			width: 500px;
+			background-color: gray;
+		}
+		.d3{
+
+			background-color: blue;
+			border-radius: 30px;
+		}
+		.d4{
+
+			background-color: blue;
+			border-radius: 30px;
+		}
+
+		div.p5{
+			color: blue;
+		}
+		.menu-container {
+    text-align: right;
+    margin: 10px 5px;
+}
+.menu-container a {
+    margin: 5px 5px 5px 10px;
+    color: #004d99;
+    font-weight: bold;
+    text-decoration: none;
+}
+<!--<img src="/static/RR.jpg" alt="RR" height="440px" width="950px" style="float:right;">-->
+
+
+    </style>
+
+    <title></title>
+</head>
+<body>
+<div>
+
+    <div class="d1">
+        <br>
+        <img src="/static/naac1.jpg" alt="naac1" height="120px" width="150px" style="float:left">
+        <img src="/static/naac1.jpg" alt="naac1" height="120px" width="150px" style="float:right;">
+
+        <h1 style="color: white;">INDIRA GANDHI NATIONAL OPEN UNIVERSITY
+            KNOW YOUR ADMISSION/REGISTRATION DETAILS</h1>
+    </div>
+    <br>
+    <th:block th:include="/_menu"></th:block>
+    <br>
+    <center>
+        <div class="d2">
+            <form action="/verify-login" method="post">
+                <table>
+                    <tr>
+
+                        <td>
+                            <label>Email</label></td>
+                        <td></td>
+                        <td></td>
+                        <td>:</td>
+                        <td><input type="text" autofocus maxlength="30" name="email" placeholder="name123@gmail.com">
+                        </td>
+                    </tr>
+                    <br style="padding: 5px;">
+                    <td>
+                        <label>PASSWORD</label></td>
+                    <td></td>
+                    <td></td>
+                    <td>:</td>
+                    <td><input type="password" autofocus maxlength="15" name="password" placeholder="*************"></td>
+                    </tr>
+
+                </table>
+                <br>
+                <br>
+                <button class="d3" style="width: 100px;">Login</button>
+                <button class="d4" style="width: 100px;" href="signup.html">Registration</button>
+<!--                <a class="d3" style="width: 100px;" href="http://www.ignou.ac.in/">Registration</a>-->
+                <br>
+                <p5>Help with login</p5>
+                <br>
+                <p5>Forgot your password</p5>
+
+            </form>
+
+        </div>
+    </center>
+</div>
+</body>
+</html>
+
+
+
